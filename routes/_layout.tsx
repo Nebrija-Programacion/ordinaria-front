@@ -1,10 +1,15 @@
 import { AppProps } from "$fresh/server.ts";
-import Layout from "../components/Layout.tsx";
 
 export default function LayoutWrapper({ Component }: AppProps) {
   return (
-    <Layout>
+    <>
+    <header class="header">
+        <nav>
+          <a href="/">Todos</a>
+          <a href="/favorites">Favoritos</a>
+        </nav>
+      </header>
       <Component />
-    </Layout>
+    </>
   );
 }

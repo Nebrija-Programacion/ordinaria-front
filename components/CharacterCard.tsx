@@ -7,7 +7,7 @@ export default function CharacterCard(
   return (
     <div class="card">
       <a href={`/characters/${character.id}`}>
-        <img src={character.image} alt={character.name} />
+        <img src={character.image!==""?character.image:"/no-image.jpg"} alt={character.name} />
       </a>
       <div class="card-info">
         <a class="name" href={`/characters/${character.id}`}>

@@ -6,7 +6,7 @@ export default function CharacterDetail(
 ) {
   return (
     <div class="detail">
-      <img src={character.image} alt={character.name} />
+      <img src={character.image!==""?character.image:"/no-image.jpg"} alt={character.name} />
       <h2>
         {character.name} <StarButton id={character.id} initial={favorite} />
       </h2>
